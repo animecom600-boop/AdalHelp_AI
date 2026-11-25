@@ -154,10 +154,10 @@ def send_chat():
             timeout=15
         )
 
-        if response.status_code not in (200, 201, 204):
-            chat_limits.pop(client_id, None)
-            return jsonify({"error": "Хабарламаны сақтау мүмкін болмады."}), 502
-
+if response.status_code not in (200, 201, 204):
+    print("SUPABASE ERROR:", response.status_code, response.text[:500])
+    chat_limits.pop(client_id, None)
+    return jsonify({"error": "Хабарламаны сақтау мүмкін болмады."}), 502
         return jsonify({
             "success": True,
             "message": "Хабарлама модерацияға жіберілді."
