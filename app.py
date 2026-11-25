@@ -23,7 +23,6 @@ CHAT_COOLDOWN = 10
 def supabase_headers():
     return {
         "apikey": SUPABASE_SECRET_KEY,
-        "Authorization": f"Bearer {SUPABASE_SECRET_KEY}",
         "Content-Type": "application/json"
     }
 
