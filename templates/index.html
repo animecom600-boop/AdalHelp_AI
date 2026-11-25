@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdalHelp AI — Сен жалғыз емессің</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">✦ AdalHelp <span>AI</span></div>
+    <div class="status">● Қолдау орталығы</div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="tag">AI SUPPORT PLATFORM</div>
+        <h1>Сен жалғыз <span>емессің.</span></h1>
+        <p>
+            Сені мазалаған жағдайды бөліс.
+            Біз оны түсінуге және шешім жолын табуға көмектесеміз.
+        </p>
+    </section>
+
+    <section class="cards">
+        <div class="card ai-card">
+            <div class="card-icon">✧</div>
+            <h2>AI көмекшісі</h2>
+            <p>Жасанды интеллектпен сөйлесіп, өз жағдайыңды талқыла.</p>
+            <button onclick="openAI()">Сөйлесуді бастау →</button>
+        </div>
+
+        <div class="card chat-card">
+            <div class="card-icon">☷</div>
+            <h2>Анонимді чат</h2>
+            <p>Басқа адамдармен пікірлесіп, бір-біріңе қолдау көрсет.</p>
+            <button onclick="openChat()">Қауымдастыққа кіру →</button>
+        </div>
+    </section>
+
+    <section class="info">
+        <h2>Бұл жерде сені тыңдайды.</h2>
+        <p>Құрмет · Құпиялылық · Қолдау</p>
+        <small>
+            Бұл платформа кәсіби медициналық немесе психологиялық
+            көмектің орнына жүрмейді.
+        </small>
+    </section>
+</main>
+
+<div id="aiWindow" class="ai-window">
+    <div class="ai-header">
+        <div>
+            <strong>✦ AdalHelp AI</strong>
+            <small>● Онлайн көмекші</small>
+        </div>
+        <button onclick="closeAI()" class="close-btn">✕</button>
+    </div>
+
+    <div id="aiMessages" class="ai-messages">
+        <div class="message ai">
+            Сәлем! Мен AdalHelp AI көмекшісімін.
+            Қандай жағдай мазалап жүр? Мен сені тыңдауға дайынмын.
+        </div>
+    </div>
+
+    <div class="ai-input-area">
+        <input id="aiInput" type="text"
+               placeholder="Хабарлама жаз..."
+               maxlength="4000"
+               onkeydown="if(event.key==='Enter') sendAI()">
+        <button onclick="sendAI()">➤</button>
+    </div>
+</div>
+
+<footer>
+    © 2026 AdalHelp AI · Барлық құқықтар қорғалған
+</footer>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
