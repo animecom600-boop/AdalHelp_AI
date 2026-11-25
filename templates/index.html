@@ -33,7 +33,7 @@
 
         <div class="card chat-card">
             <div class="card-icon">☷</div>
-            <h2>Анонимді чат</h2>
+            <h2>Қауымдастық чаты</h2>
             <p>Басқа адамдармен пікірлесіп, бір-біріңе қолдау көрсет.</p>
             <button onclick="openChat()">Қауымдастыққа кіру →</button>
         </div>
@@ -71,6 +71,31 @@
                maxlength="4000"
                onkeydown="if(event.key==='Enter') sendAI()">
         <button onclick="sendAI()">➤</button>
+    </div>
+</div>
+
+<div id="chatWindow" class="ai-window">
+    <div class="ai-header">
+        <div>
+            <strong>☷ AdalHelp қауымдастығы</strong>
+            <small>● Ортақ чат</small>
+        </div>
+        <button onclick="closeChat()" class="close-btn">✕</button>
+    </div>
+
+    <div class="chat-rules">
+        Құрметпен сөйлес. Жеке деректеріңді жариялама.
+        Хабарламалар модерациядан кейін көрінеді.
+    </div>
+
+    <div id="communityMessages" class="ai-messages"></div>
+
+    <div class="ai-input-area">
+        <input id="chatNickname" type="text"
+               placeholder="Лақап атың" maxlength="20">
+        <input id="chatInput" type="text"
+               placeholder="Хабарлама жаз..." maxlength="500">
+        <button onclick="sendChat()">➤</button>
     </div>
 </div>
 

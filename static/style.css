@@ -310,3 +310,40 @@ footer {
         height: 75vh;
     }
 }
+/* AdalHelp Community Chat */
+
+.chat-rules {
+    padding: 12px 15px;
+    background: #172e49;
+    color: #a9c9e8;
+    font-size: 12px;
+    line-height: 1.5;
+    border-bottom: 1px solid #29415e;
+}
+
+#chatWindow .ai-input-area {
+    flex-wrap: wrap;
+}
+
+#chatWindow .ai-input-area input {
+    flex: 1 1 100%;
+}
+
+#chatWindow .ai-input-area button {
+    flex: 0 0 45px;
+    margin-left: auto;
+}
+
+#communityMessages .message {
+    max-width: 95%;
+    width: fit-content;
+}
+
+#communityMessages .message strong {
+    color: #75c5ff;
+}
+
+#communityMessages {
+    color: #b9cce0;
+    font-size: 14px;
+}
